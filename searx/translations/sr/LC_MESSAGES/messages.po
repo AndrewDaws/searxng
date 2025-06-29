@@ -15,13 +15,14 @@
 # SecularSteve <secularsteve@users.noreply.translate.codeberg.org>, 2025.
 # ivantodorov <ivantodorov@users.noreply.translate.codeberg.org>, 2025.
 # return42 <return42@noreply.codeberg.org>, 2025.
+# SecularSteve <secularsteve@noreply.codeberg.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: searx\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-03-29 09:21+0000\n"
-"PO-Revision-Date: 2025-03-31 18:08+0000\n"
-"Last-Translator: return42 <return42@noreply.codeberg.org>\n"
+"POT-Creation-Date: 2025-06-23 21:05+0000\n"
+"PO-Revision-Date: 2025-06-24 13:04+0000\n"
+"Last-Translator: SecularSteve <secularsteve@noreply.codeberg.org>\n"
 "Language-Team: Serbian <https://translate.codeberg.org/projects/searxng/"
 "searxng/sr/>\n"
 "Language: sr\n"
@@ -30,7 +31,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.10.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "Generated-By: Babel 2.17.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
@@ -74,7 +75,7 @@ msgid "videos"
 msgstr "видео снимци"
 
 #. CATEGORY_NAMES['RADIO']
-#: searx/engines/radio_browser.py:103 searx/searxng.msg
+#: searx/engines/radio_browser.py:151 searx/searxng.msg
 msgid "radio"
 msgstr "радио"
 
@@ -189,7 +190,7 @@ msgid "Average temp."
 msgstr "Просечна температура"
 
 #. WEATHER_TERMS['CLOUD COVER']
-#: searx/engines/open_meteo.py:91 searx/searxng.msg
+#: searx/searxng.msg
 msgid "Cloud cover"
 msgstr "Облачност"
 
@@ -211,14 +212,14 @@ msgid "Evening"
 msgstr "Вече"
 
 #. WEATHER_TERMS['FEELS LIKE']
-#: searx/engines/duckduckgo_weather.py:53 searx/engines/open_meteo.py:81
-#: searx/engines/wttr.py:59 searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:53 searx/engines/wttr.py:59
+#: searx/searxng.msg
 msgid "Feels like"
 msgstr "Осећај"
 
 #. WEATHER_TERMS['HUMIDITY']
-#: searx/engines/duckduckgo_weather.py:64 searx/engines/open_meteo.py:93
-#: searx/engines/wttr.py:68 searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:64 searx/engines/wttr.py:68
+#: searx/searxng.msg searx/templates/simple/answer/weather.html:29
 msgid "Humidity"
 msgstr "Влажност"
 
@@ -250,7 +251,7 @@ msgid "Noon"
 msgstr "Подне"
 
 #. WEATHER_TERMS['PRESSURE']
-#: searx/engines/open_meteo.py:95 searx/searxng.msg
+#: searx/searxng.msg searx/templates/simple/answer/weather.html:25
 msgid "Pressure"
 msgstr "Притисак"
 
@@ -267,8 +268,8 @@ msgid "Sunset"
 msgstr "Залазак Сунца"
 
 #. WEATHER_TERMS['TEMPERATURE']
-#: searx/engines/duckduckgo_weather.py:48 searx/engines/open_meteo.py:76
-#: searx/engines/wttr.py:55 searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:48 searx/engines/wttr.py:55
+#: searx/searxng.msg searx/templates/simple/answer/weather.html:17
 msgid "Temperature"
 msgstr "Температура"
 
@@ -285,10 +286,215 @@ msgid "Visibility"
 msgstr "Видљивост"
 
 #. WEATHER_TERMS['WIND']
-#: searx/engines/duckduckgo_weather.py:58 searx/engines/open_meteo.py:86
-#: searx/engines/wttr.py:62 searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:58 searx/engines/wttr.py:62
+#: searx/searxng.msg searx/templates/simple/answer/weather.html:23
 msgid "Wind"
 msgstr "Ветар"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Clear sky"
+msgstr "Ведро небо"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Cloudy"
+msgstr "Облачно"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Fair"
+msgstr "Поштено"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Fog"
+msgstr "Магла"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy rain and thunder"
+msgstr "Јака киша и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy rain showers and thunder"
+msgstr "Јаки пљускови и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy rain showers"
+msgstr "Јаки пљускови"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy rain"
+msgstr "Јака киша"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy sleet and thunder"
+msgstr "Јака суснежица и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy sleet showers and thunder"
+msgstr "Јаки суснежични пљускови и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy sleet showers"
+msgstr "Јаки суснежични пљускови"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy sleet"
+msgstr "Јака суснежица"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy snow and thunder"
+msgstr "Јак снег и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy snow showers and thunder"
+msgstr "Јаки снежни пљускови и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy snow showers"
+msgstr "Јаки снежни пљускови"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Heavy snow"
+msgstr "Јак снег"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light rain and thunder"
+msgstr "Слаба киша и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light rain showers and thunder"
+msgstr "Слаби кишни пљускови и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light rain showers"
+msgstr "Слаби кишни пљускови"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light rain"
+msgstr "Слаба киша"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light sleet and thunder"
+msgstr "Слаба суснежица и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light sleet showers and thunder"
+msgstr "Слаби суснежични пљускови и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light sleet showers"
+msgstr "Слаби суснежични пљускови"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light sleet"
+msgstr "Слаба суснежица"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light snow and thunder"
+msgstr "Слаб снег и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light snow showers and thunder"
+msgstr "Слаби снежни пљускови и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light snow showers"
+msgstr "Слаби снежни пљускови"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Light snow"
+msgstr "Слаб снег"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Partly cloudy"
+msgstr "Делимично облачно"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Rain and thunder"
+msgstr "Киша и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Rain showers and thunder"
+msgstr "Пљускови кише и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Rain showers"
+msgstr "Пљускови кише"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Rain"
+msgstr "Киша"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Sleet and thunder"
+msgstr "Суснежица и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Sleet showers and thunder"
+msgstr "Пљускови суснежице и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Sleet showers"
+msgstr "Пљускови суснежице"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Sleet"
+msgstr "Суснежица"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Snow and thunder"
+msgstr "Снег и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Snow showers and thunder"
+msgstr "Снежни пљускови и грмљавина"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Snow showers"
+msgstr "Снежни пљускови"
+
+#. WEATHER_CONDITIONS
+#: searx/searxng.msg
+msgid "Snow"
+msgstr "Снег"
 
 #. SOCIAL_MEDIA_TERMS['SUBSCRIBERS']
 #: searx/engines/lemmy.py:85 searx/searxng.msg
@@ -351,93 +557,93 @@ msgstr "затворено"
 msgid "answered"
 msgstr "одговорено"
 
-#: searx/webapp.py:312
+#: searx/webapp.py:292
 msgid "No item found"
 msgstr "Ставка није пронађена"
 
 #: searx/engines/qwant.py:291
-#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:314
+#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:294
 msgid "Source"
 msgstr "Извор"
 
-#: searx/webapp.py:316
+#: searx/webapp.py:296
 msgid "Error loading the next page"
 msgstr "Грешка приликом учитавања следеће странице"
 
-#: searx/webapp.py:469 searx/webapp.py:875
+#: searx/webapp.py:447 searx/webapp.py:845
 msgid "Invalid settings, please edit your preferences"
 msgstr "Неважеће поставке, молимо уредите свој избор"
 
-#: searx/webapp.py:485
+#: searx/webapp.py:463
 msgid "Invalid settings"
 msgstr "Неважећа подешавања"
 
-#: searx/webapp.py:562 searx/webapp.py:652
+#: searx/webapp.py:540 searx/webapp.py:630
 msgid "search error"
 msgstr "грешка у претрази"
 
-#: searx/webutils.py:36
+#: searx/webutils.py:35
 msgid "timeout"
 msgstr "тајмаут"
 
-#: searx/webutils.py:37
+#: searx/webutils.py:36
 msgid "parsing error"
 msgstr "грешка при парсирању"
 
-#: searx/webutils.py:38
+#: searx/webutils.py:37
 msgid "HTTP protocol error"
 msgstr "грешка у HTTP протоколу"
 
-#: searx/webutils.py:39
+#: searx/webutils.py:38
 msgid "network error"
 msgstr "грешка на мрежи"
 
-#: searx/webutils.py:40
+#: searx/webutils.py:39
 msgid "SSL error: certificate validation has failed"
 msgstr "SSL грешка: валидација сертификата није успела"
 
-#: searx/webutils.py:42
+#: searx/webutils.py:41
 msgid "unexpected crash"
 msgstr "неочекиван престанак рада"
 
-#: searx/webutils.py:49
+#: searx/webutils.py:48
 msgid "HTTP error"
 msgstr "HTTP грешка"
 
-#: searx/webutils.py:50
+#: searx/webutils.py:49
 msgid "HTTP connection error"
 msgstr "проблем при HTTPS конекцији"
 
-#: searx/webutils.py:56
+#: searx/webutils.py:55
 msgid "proxy error"
 msgstr "прокси грешка"
 
-#: searx/webutils.py:57
+#: searx/webutils.py:56
 msgid "CAPTCHA"
 msgstr "CAPTCHA"
 
-#: searx/webutils.py:58
+#: searx/webutils.py:57
 msgid "too many requests"
 msgstr "превише захтева"
 
-#: searx/webutils.py:59
+#: searx/webutils.py:58
 msgid "access denied"
 msgstr "није дозвољен приступ"
 
-#: searx/webutils.py:60
+#: searx/webutils.py:59
 msgid "server API error"
 msgstr "серверска API грешка"
 
-#: searx/webutils.py:79
+#: searx/webutils.py:78
 msgid "Suspended"
 msgstr "Суспендован"
 
-#: searx/webutils.py:314
+#: searx/webutils.py:313
 #, python-brace-format
 msgid "{minutes} minute(s) ago"
 msgstr "пре {minutes} минут(у,е,а)"
 
-#: searx/webutils.py:315
+#: searx/webutils.py:314
 #, python-brace-format
 msgid "{hours} hour(s), {minutes} minute(s) ago"
 msgstr "пре {hours} час(a) и {minutes} минут(у,е,а)"
@@ -468,15 +674,15 @@ msgstr "Овај унос је заменио"
 msgid "Channel"
 msgstr "Канал"
 
-#: searx/engines/radio_browser.py:105
+#: searx/engines/radio_browser.py:153
 msgid "bitrate"
 msgstr "битрата"
 
-#: searx/engines/radio_browser.py:106
+#: searx/engines/radio_browser.py:154
 msgid "votes"
 msgstr "гласови"
 
-#: searx/engines/radio_browser.py:107
+#: searx/engines/radio_browser.py:155
 msgid "clicks"
 msgstr "кликови"
 
@@ -485,7 +691,7 @@ msgstr "кликови"
 msgid "Language"
 msgstr "Језик"
 
-#: searx/engines/semantic_scholar.py:79
+#: searx/engines/semantic_scholar.py:101
 #, python-brace-format
 msgid ""
 "{numCitations} citations from the year {firstCitationVelocityYear} to "
@@ -526,15 +732,17 @@ msgstr "Квалитет датотеке"
 
 #: searx/plugins/ahmia_filter.py:32
 msgid "Ahmia blacklist"
-msgstr ""
+msgstr "Ахмијска црна листа"
 
 #: searx/plugins/ahmia_filter.py:33
 msgid "Filter out onion results that appear in Ahmia's blacklist."
 msgstr ""
+"Филтрирај резултате претраге за портове који се појављују на Ахмијиној црној "
+"листи."
 
 #: searx/plugins/calculator.py:38
 msgid "Basic Calculator"
-msgstr ""
+msgstr "Основни Калкулатор"
 
 #: searx/plugins/calculator.py:39
 msgid "Calculate mathematical expressions via the search bar"
@@ -544,11 +752,15 @@ msgstr "Израчунај математичке изразе кроз поље
 msgid "Hash plugin"
 msgstr "Хеш плагин"
 
-#: searx/plugins/hash_plugin.py:35
-msgid "Converts strings to different hash digests."
-msgstr "Претвара стринг у другачије хешеве."
+#: searx/plugins/hash_plugin.py:36
+msgid ""
+"Converts strings to different hash digests. Available functions: md5, "
+"sha1, sha224, sha256, sha384, sha512."
+msgstr ""
+"Претвара стрингове у различите хеш сажетке. Доступне функције: md5, sha1, "
+"sha224, sha256, sha384, sha512."
 
-#: searx/plugins/hash_plugin.py:62
+#: searx/plugins/hash_plugin.py:64
 msgid "hash digest"
 msgstr "Излаз хеш функције"
 
@@ -557,8 +769,10 @@ msgid "Hostnames plugin"
 msgstr "Хостнејмс плагин"
 
 #: searx/plugins/hostnames.py:124
-msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
-msgstr "Преуреди домене, уклони или промени приоритет резултата према домену"
+msgid "Rewrite hostnames and remove or prioritize results based on the hostname"
+msgstr ""
+"Пребришите имена домаћина и уклоните или дајте приоритет резултатима на "
+"основу имена домаћина"
 
 #: searx/plugins/oa_doi_rewrite.py:55
 msgid "Open Access DOI rewrite"
@@ -614,21 +828,26 @@ msgstr "Користите Тор и могуће је да имате екст�
 msgid "You are not using Tor and you have the external IP address"
 msgstr "Ne kористите Тор и имате екстерну IP адресу"
 
-#: searx/plugins/tracker_url_remover.py:37
+#: searx/plugins/tracker_url_remover.py:35
 msgid "Tracker URL remover"
 msgstr "Уклони трекер URL адресе"
 
-#: searx/plugins/tracker_url_remover.py:38
+#: searx/plugins/tracker_url_remover.py:36
 msgid "Remove trackers arguments from the returned URL"
 msgstr "Уклања аргументе трекера од повратне URL адресе"
 
 #: searx/plugins/unit_converter.py:49
 msgid "Unit converter plugin"
-msgstr ""
+msgstr "Додатак за конверзију јединица"
 
 #: searx/plugins/unit_converter.py:50
 msgid "Convert between units"
 msgstr "Конвертуј јединице"
+
+#: searx/result_types/answer.py:224
+#, python-brace-format
+msgid "{location}: {temperature}, {condition}"
+msgstr "{location}: {temperature}, {condition}"
 
 #: searx/templates/simple/404.html:4
 msgid "Page not found"
@@ -707,10 +926,6 @@ msgstr "Аутор"
 #: searx/templates/simple/macros.html:50
 msgid "cached"
 msgstr "кеширано"
-
-#: searx/templates/simple/macros.html:50
-msgid "proxied"
-msgstr "прокси"
 
 #: searx/templates/simple/new_issue.html:64
 msgid "Start submitting a new issue on GitHub"
@@ -946,6 +1161,10 @@ msgstr "Дефиниције"
 msgid "Synonyms"
 msgstr "Синоними"
 
+#: searx/templates/simple/answer/weather.html:19
+msgid "Feels Like"
+msgstr "Осети се као"
+
 #: searx/templates/simple/elements/answers.html:2
 msgid "Answers"
 msgstr "Одговори"
@@ -1123,16 +1342,16 @@ msgid "Autocomplete"
 msgstr "Ауто попуњавање"
 
 #: searx/templates/simple/preferences/autocomplete.html:15
-msgid "Find stuff as you type"
-msgstr "Пронађите док куцате"
+msgid "Show possible queries as you type"
+msgstr "Прикажите могуће упите док куцате"
 
 #: searx/templates/simple/preferences/center_alignment.html:2
 msgid "Center Alignment"
 msgstr "Поравнање по средини"
 
 #: searx/templates/simple/preferences/center_alignment.html:14
-msgid "Displays results in the center of the page (Oscar layout)."
-msgstr "Приказује резултате на центру странице (Оскар распоред)."
+msgid "Display results in the center of the page (Oscar layout)."
+msgstr "Прикажите резултате у средини странице (Оскар распоред)."
 
 #: searx/templates/simple/preferences/cookies.html:2
 msgid ""
@@ -1143,8 +1362,8 @@ msgstr ""
 "рачунару."
 
 #: searx/templates/simple/preferences/cookies.html:3
-msgid "With that list, you can assess SearXNG transparency."
-msgstr "Са том листом можете проценити транспарентност СеарКСНГ-а."
+msgid "With this list, you can assess the transparency of SearXNG."
+msgstr "Помоћу ове листе можете проценити прозирност SearXNG-а."
 
 #: searx/templates/simple/preferences/cookies.html:9
 msgid "Cookie name"
@@ -1175,6 +1394,8 @@ msgid ""
 "A URL containing your preferences. This URL can be used to restore your "
 "settings on a different device."
 msgstr ""
+"URL адреса која садржи ваша подешавања. Ова URL адреса се може користити да "
+"вратите ваша подешавања на другом уређају."
 
 #: searx/templates/simple/preferences/cookies.html:46
 msgid "Copy preferences hash"
@@ -1202,11 +1423,11 @@ msgstr "Изаберите услугу коју користи ДОИ изно�
 
 #: searx/templates/simple/preferences/engines.html:9
 msgid ""
-"This tab does not exists in the user interface, but you can search in "
-"these engines by its !bangs."
+"This tab does not exist in the user interface, but you can search with "
+"these engines via !bangs."
 msgstr ""
 "Ова картица не постоји у корисничком интерфејсу, али можете претраживати "
-"у овим машинама по његовим !bangs-има."
+"помоћу ових претраживача преко !bangs."
 
 #: searx/templates/simple/preferences/engines.html:15
 msgid "Enable all"
@@ -1242,19 +1463,17 @@ msgstr "Прикажи иконице поред резултата претра
 
 #: searx/templates/simple/preferences/footer.html:2
 msgid ""
-"These settings are stored in your cookies, this allows us not to store "
+"These settings are stored in your cookies. This allows us not to store "
 "this data about you."
 msgstr ""
-"Ова подешавања се чувају у вашим колачићима, што нам омогућава да не "
-"сачувамо ове податке о вама."
+"Ова подешавања се похрањују у вашим колачићима. Ово нам омогућава да не "
+"чувамо ове податке о вама."
 
 #: searx/templates/simple/preferences/footer.html:3
-msgid ""
-"These cookies serve your sole convenience, we don't use these cookies to "
-"track you."
+msgid "These cookies serve your sole convenience; we don't use them to track you."
 msgstr ""
-"Ови колачићи служе Вашој погодности, ми не користимо ове колачиће да вас "
-"пратимо."
+"Ови колачићи служе искључиво вашој удобности; не користимо их да бисмо вас "
+"шпијунирали."
 
 #: searx/templates/simple/preferences/footer.html:6
 msgid "Save"
@@ -1290,17 +1509,19 @@ msgid "Image proxy"
 msgstr "Прокси слика"
 
 #: searx/templates/simple/preferences/image_proxy.html:14
-msgid "Proxying image results through SearXNG"
-msgstr "Прокси резултат слике преко СеарКСНГ"
+msgid "Proxy image results through SearXNG"
+msgstr "Проксирајте резултате слика преко SearXNG-а"
 
 #: searx/templates/simple/preferences/infinite_scroll.html:2
 msgid "Infinite scroll"
 msgstr "Бесконачно померање"
 
 #: searx/templates/simple/preferences/infinite_scroll.html:14
-msgid "Automatically load next page when scrolling to bottom of current page"
+msgid ""
+"Automatically load the next page when scrolling to the bottom of the "
+"current page"
 msgstr ""
-"Аутоматско учитавање следеће странице приликом померања на дно текуће "
+"Аутоматски учитајте следећу страницу приликом померања до дна тренутне "
 "странице"
 
 #: searx/templates/simple/preferences/language.html:24
@@ -1334,12 +1555,12 @@ msgstr ""
 "претраживач може да сними овај наслов"
 
 #: searx/templates/simple/preferences/results_on_new_tab.html:2
-msgid "Results on new tabs"
-msgstr "Резултати на картицама"
+msgid "Results in new tabs"
+msgstr "Резултати у новим картицама"
 
 #: searx/templates/simple/preferences/results_on_new_tab.html:14
-msgid "Open result links on new browser tabs"
-msgstr "Отворите линкове са резултатима на новим картицама претраживача"
+msgid "Open result links in new browser tabs"
+msgstr "Отвори повезнице резултата у новим картицама прегледача"
 
 #: searx/templates/simple/preferences/safesearch.html:20
 msgid "Filter content"
@@ -1351,10 +1572,10 @@ msgstr "Тражите категорију избора"
 
 #: searx/templates/simple/preferences/search_on_category_select.html:14
 msgid ""
-"Perform search immediately if a category selected. Disable to select "
-"multiple categories"
+"Perform a search immediately if a category is selected. Disable to select"
+" multiple categories"
 msgstr ""
-"Извршите претрагу одмах ако је одабрана категорија. Онемогућите да бисте "
+"Одмах извршите претрагу ако је изабрана категорија. Онемогућите да бисте "
 "изабрали више категорија"
 
 #: searx/templates/simple/preferences/theme.html:2
@@ -1362,8 +1583,8 @@ msgid "Theme"
 msgstr "Тема"
 
 #: searx/templates/simple/preferences/theme.html:14
-msgid "Change SearXNG layout"
-msgstr "Промените изглед СеарКСНГ-а"
+msgid "Change the layout of SearXNG"
+msgstr "Промените распоред SearXNG-а"
 
 #: searx/templates/simple/preferences/theme.html:19
 msgid "Theme style"
@@ -1808,7 +2029,7 @@ msgstr "сакриј видео"
 #~ msgstr ""
 
 #~ msgid "Displays results in the center of the page (Oscar layout)."
-#~ msgstr ""
+#~ msgstr "Приказује резултате на центру странице (Оскар распоред)."
 
 #~ msgid "preferences"
 #~ msgstr "ПОДЕШАВАЊА"
@@ -2074,3 +2295,73 @@ msgstr "сакриј видео"
 #~ "Одређивање прилагођених подешавања у УРЛ-у "
 #~ "може да се користи за синхронизацију "
 #~ "подешавања на свим уређајима."
+
+#~ msgid "proxied"
+#~ msgstr "прокси"
+
+#~ msgid ""
+#~ "This tab does not exists in the"
+#~ " user interface, but you can search"
+#~ " in these engines by its !bangs."
+#~ msgstr ""
+#~ "Ова картица не постоји у корисничком "
+#~ "интерфејсу, али можете претраживати у "
+#~ "овим машинама по његовим !bangs-има."
+
+#~ msgid "Results on new tabs"
+#~ msgstr "Резултати на картицама"
+
+#~ msgid "Open result links on new browser tabs"
+#~ msgstr "Отворите линкове са резултатима на новим картицама претраживача"
+
+#~ msgid "Find stuff as you type"
+#~ msgstr "Пронађите док куцате"
+
+#~ msgid "Converts strings to different hash digests."
+#~ msgstr "Претвара стринг у другачије хешеве."
+
+#~ msgid ""
+#~ "Rewrite hostnames, remove results or "
+#~ "prioritize them based on the hostname"
+#~ msgstr "Преуреди домене, уклони или промени приоритет резултата према домену"
+
+#~ msgid "With that list, you can assess SearXNG transparency."
+#~ msgstr "Са том листом можете проценити транспарентност СеарКСНГ-а."
+
+#~ msgid ""
+#~ "These settings are stored in your "
+#~ "cookies, this allows us not to "
+#~ "store this data about you."
+#~ msgstr ""
+#~ "Ова подешавања се чувају у вашим "
+#~ "колачићима, што нам омогућава да не "
+#~ "сачувамо ове податке о вама."
+
+#~ msgid ""
+#~ "These cookies serve your sole "
+#~ "convenience, we don't use these cookies"
+#~ " to track you."
+#~ msgstr ""
+#~ "Ови колачићи служе Вашој погодности, ми"
+#~ " не користимо ове колачиће да вас "
+#~ "пратимо."
+
+#~ msgid "Proxying image results through SearXNG"
+#~ msgstr "Прокси резултат слике преко СеарКСНГ"
+
+#~ msgid "Automatically load next page when scrolling to bottom of current page"
+#~ msgstr ""
+#~ "Аутоматско учитавање следеће странице приликом"
+#~ " померања на дно текуће странице"
+
+#~ msgid ""
+#~ "Perform search immediately if a category"
+#~ " selected. Disable to select multiple "
+#~ "categories"
+#~ msgstr ""
+#~ "Извршите претрагу одмах ако је одабрана"
+#~ " категорија. Онемогућите да бисте изабрали"
+#~ " више категорија"
+
+#~ msgid "Change SearXNG layout"
+#~ msgstr "Промените изглед СеарКСНГ-а"
